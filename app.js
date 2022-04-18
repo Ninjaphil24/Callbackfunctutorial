@@ -25,5 +25,28 @@ function secondAction() {
     alert('2nd Action')
 }
 
-setTimeout(firstAction,5000)
-secondAction()
+// setTimeout(firstAction,5000)
+// secondAction()
+
+// Promises
+
+let allGood = false;
+
+// Possible promise states: Pending, Fulfilled, Rejected
+
+let fetchSomeData = new Promise((resolve, reject)=>{
+    if(!allGood){
+        reject("error fetching data")
+    } else {
+        resolve({
+            id:1,
+            message: 'nice work!'
+        })
+    }
+})
+
+fetchSomeData.then(fetchdData=>{
+    console.log('then:', fetchdData)
+}).catch(err=>{
+    console.error('catch:',err)
+})
