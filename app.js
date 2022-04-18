@@ -32,6 +32,7 @@ function secondAction() {
 
 let allGood = false;
 
+// https://youtu.be/zu6I2FXakLI
 // Possible promise states: Pending, Fulfilled, Rejected
 
 let fetchSomeData = new Promise((resolve, reject)=>{
